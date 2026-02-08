@@ -1,29 +1,43 @@
 {
   "expo": {
-    "name": "KisanVerse-v2",
-    "slug": "KisanVerse-v2",
+    "name": "KisanVerse",
+    "slug": "kisanverse",
     "version": "1.0.0",
+    "description": "Voice-first financial literacy game for Indian farmers",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E8F5E9"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kisanverse.app"
     },
     "android": {
+      "package": "com.kisanverse.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#4CAF50"
       },
-      "edgeToEdgeEnabled": true
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-av"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "566d1e3a-b1ea-4929-ba45-682e1ae61f96"
+      }
     }
   }
 }
